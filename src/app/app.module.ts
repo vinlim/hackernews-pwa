@@ -7,8 +7,10 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {PageNewsComponent} from './pages/news/news.component';
 import {PageNotFoundComponent} from './pages/not-found/not-found.component';
-import { PageAboutComponent } from './pages/page-about/page-about.component';
-import { PageFavouriteComponent } from './pages/page-favourite/page-favourite.component';
+import {PageAboutComponent} from './pages/about/page-about.component';
+import {PageFavouriteComponent} from './pages/favourite/page-favourite.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MsToHumanReadableTimePipe} from './pipes/ms-to-human-readable-time.pipe';
 
 @NgModule({
     declarations: [
@@ -18,11 +20,13 @@ import { PageFavouriteComponent } from './pages/page-favourite/page-favourite.co
         PageNewsComponent,
         PageNotFoundComponent,
         PageAboutComponent,
-        PageFavouriteComponent
+        PageFavouriteComponent,
+        MsToHumanReadableTimePipe
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
