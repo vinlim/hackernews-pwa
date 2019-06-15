@@ -1,7 +1,7 @@
 <div class="container" style="margin-bottom: 42px;">
     <div class="row">
         <div class="col-12 col-md-8 offset-md-2 px-0">
-            <ul class="list-group">
+            <div class="list-group">
                 <a href="{{story.url}}"
                    target="_blank"
                    rel="noopener"
@@ -19,7 +19,7 @@
                     </div>
                     <span class="badge badge-primary badge-pill">{{story.descendants}}</span>
                 </a>
-            </ul>
+            </div>
             <button *ngIf="this.stories.length > 0" (click)="getNext()"
                     [class.invisible]="this.nextStories.length === 0"
                     class="btn btn-block btn-outline-primary border-0">
