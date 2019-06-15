@@ -6,6 +6,9 @@ import {Pipe, PipeTransform} from '@angular/core';
 export class MsToHumanReadableTimePipe implements PipeTransform {
 
     transform(value: number): string {
+        // Convert from unix timestamp & get difference
+        value = new Date().getTime() - (value * 1000);
+
         let temp = Math.floor(value / 1000);
         const years = Math.floor(temp / 31536000);
         if (years) {
@@ -33,5 +36,4 @@ export class MsToHumanReadableTimePipe implements PipeTransform {
     private numberEnding(value: number) {
         return (value > 1) ? 's' : '';
     }
-
 }
