@@ -22,8 +22,10 @@ export class PageNewsComponent implements OnInit {
 
     public async getNext() {
         this.stories = this.stories.concat(this.nextStories);
+        this.nextStories = [];
         this.currentPage = this.currentPage + 1;
         this.nextStories = await this.getStories(this.currentPage + 1);
+        console.log(this.nextStories);
     }
 
     private async initList() {
@@ -34,7 +36,6 @@ export class PageNewsComponent implements OnInit {
         const stories = await this.getStories(this.currentPage);
         this.stories = await this.stories.concat(stories);
         this.nextStories = await this.nextStories.concat(await this.getStories(this.currentPage + 1));
-        console.log('next', this.nextStories);
         // tslint:disable-next-line:no-console
         console.timeEnd('getList');
     }

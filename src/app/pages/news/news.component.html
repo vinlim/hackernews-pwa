@@ -20,7 +20,9 @@
                     <span class="badge badge-primary badge-pill">{{story.descendants}}</span>
                 </a>
             </ul>
-            <button *ngIf="this.stories.length > 0" (click)="getNext()" class="btn btn-block btn-outline-primary border-0">
+            <button *ngIf="this.stories.length > 0" (click)="getNext()"
+                    [class.invisible]="this.nextStories.length === 0"
+                    class="btn btn-block btn-outline-primary border-0">
                 Next
             </button>
         </div>
