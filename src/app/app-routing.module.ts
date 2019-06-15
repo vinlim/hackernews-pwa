@@ -7,7 +7,7 @@ import {PageFavouriteComponent} from './pages/favourite/page-favourite.component
 
 const routes: Routes = [
     {
-        path: 'news',
+        path: '',
         component: PageNewsComponent
     },
     {
@@ -17,11 +17,6 @@ const routes: Routes = [
     {
         path: 'favourite',
         component: PageFavouriteComponent
-    },
-    {
-        path: '',
-        redirectTo: 'news',
-        pathMatch: 'full'
     },
     {
         path: '**',
