@@ -26,7 +26,8 @@
               "src/favicon.ico",
               "src/assets",
               "src/service-worker.js",
-              "src/index.html"
+              "src/index.html",
+              "src/manifest.json"
             ],
             "styles": [
               "src/styles.scss"
