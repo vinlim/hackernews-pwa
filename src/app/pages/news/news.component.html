@@ -1,30 +1,7 @@
 <div class="container" style="margin-bottom: 62px;">
     <div class="row">
         <div class="col-12 col-md-8 offset-md-2 px-0">
-            <div class="list-group">
-                <a href="{{story.url}}"
-                   target="_blank"
-                   rel="noopener"
-                   class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-                   *ngFor="let story of stories">
-                    <div>
-                        <p class="mb-0">
-                            <strong>{{story.title}}</strong>
-                        </p>
-                        <p class="text-muted mb-0">
-                            <small>
-                                {{story.score}} points by {{story.by}} {{story.time | msToHumanReadableTime}} ago
-                            </small>
-                        </p>
-                    </div>
-                    <span class="badge badge-primary badge-pill d-flex">{{story.descendants}}</span>
-                </a>
-            </div>
-            <button *ngIf="this.stories.length > 0" (click)="getNext()"
-                    [class.invisible]="this.nextStories.length === 0"
-                    class="btn btn-block btn-outline-primary border-0">
-                Next
-            </button>
+            
         </div>
     </div>
 </div>
